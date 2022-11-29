@@ -21,14 +21,14 @@ drools:
         when
             CustomerRequest(age < 20)
         then
-            customerType.setCustomerType(CustomerCategory.KIDS);
+            customerType.setCustomerType(CustomerCategory.SENIOR_CITIZEN);
     end
 
     rule "Categorize senior citizen customer based on age"
         when
             CustomerRequest(age > 50)
         then
-          customerType.setCustomerType(CustomerCategory.SENIOR_CITIZEN);
+          customerType.setCustomerType(CustomerCategory.KIDS);
     end
 
     rule "Categorize customer based on number of orders"
